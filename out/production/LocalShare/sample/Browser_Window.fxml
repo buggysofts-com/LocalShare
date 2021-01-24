@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane prefHeight="475.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Browser_Dialog_Window_Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="700.0" minWidth="10.0" prefWidth="700.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="314.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="650.0" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="175.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.0" minWidth="10.0" prefWidth="525.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="400.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox GridPane.columnIndex="1">
+                    <children>
+                        <HBox prefHeight="31.0" prefWidth="415.0" spacing="5.0">
+                            <children>
+                                <ComboBox fx:id="Sort_Option" prefHeight="25.0" prefWidth="119.0" promptText="Sort By" style="-fx-border-radius: 0;" />
+                                <Button fx:id="Sort_Style" mnemonicParsing="false" style="-fx-background-color: #F4F4F4;" text="▲" />
+                                <TextField fx:id="Search_Bar" HBox.hgrow="ALWAYS" />
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" />
+                            </padding>
+                        </HBox>
+                        <HBox VBox.vgrow="ALWAYS">
+                            <children>
+                                <ListView fx:id="Browser_Window" prefHeight="311.0" prefWidth="535.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <HBox prefHeight="32.0" prefWidth="165.0" spacing="5.0" VBox.vgrow="NEVER">
+                            <children>
+                                <Button fx:id="Back" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="&lt;   Back" />
+                                <Button fx:id="UP" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="^  Up" />
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" />
+                            </padding>
+                        </HBox>
+                        <ScrollPane prefHeight="365.0" prefWidth="165.0" VBox.vgrow="ALWAYS">
+                            <content>
+                                <TreeView fx:id="Tree_Window" prefHeight="273.0" prefWidth="148.0" />
+                            </content>
+                        </ScrollPane>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </GridPane>
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+            <children>
+                <Label fx:id="FileName" prefHeight="17.0" prefWidth="447.0" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets left="5.0" />
+                    </padding></Label>
+                <Label fx:id="FileSize" prefHeight="17.0" prefWidth="177.0" HBox.hgrow="ALWAYS" />
+                <Button fx:id="Add_Files" minHeight="25.0" minWidth="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="    Add    " />
+            </children>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </GridPane.margin>
+        </HBox>
+        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" />
+            </padding>
+            <children>
+                <Separator prefWidth="200.0" />
+                <Separator prefWidth="200.0" />
+                <HBox>
+                    <children>
+                        <ListView fx:id="Added_File_List" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <HBox>
+            <children>
+                <TextField fx:id="Path_Text" editable="false" HBox.hgrow="ALWAYS" />
+            </children>
+            <padding>
+                <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </padding>
+        </HBox>
+    </children>
+    <padding>
+        <Insets top="5.0" />
+    </padding>
+</GridPane>

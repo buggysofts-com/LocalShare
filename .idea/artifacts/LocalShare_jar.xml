@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LocalShare:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LocalShare_jar</output-path>
+    <root id="archive" name="LocalShare.jar">
+      <element id="module-output" name="LocalShare" />
+    </root>
+  </artifact>
+</component>
